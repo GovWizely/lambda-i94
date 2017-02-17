@@ -1,0 +1,11 @@
+module Constants
+  VISA_WAIVER_COUNTRIES = ["Andorra", "Australia", "Austria", "Belgium", "Brunei", "Chile", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Iceland", "Italy", "Japan", "South Korea", "Latvia", "Liechtenstein", "Lithuania", "Luxembourg", "Malta", "Monaco", "Netherlands", "New Zealand", "Norway", "Portugal", "San Marino", "Singapore", "Slovakia", "Slovenia", "Spain", "Sweden", "Switzerland", "Taiwan", "United Kingdom"]
+
+  PATA_COUNTRIES = ["Australia", "Bangladesh", "Bhutan", "Brunei", "Cambodia", "China", "Christmas Island", "Cook Islands", "Cocos Islands", "East Timor", "Fiji", "French Polynesia", "Hong Kong", "India", "Indian Ocean Territory", "Indonesia", "Kiribati", "Laos", "Macau", "Malaysia", "Maldives", "Marshall Islands", "Micronesia, Fed. States of", "Mongolia", "Nauru", "Nepal", "New Caledonia", "New Zealand", "Niue", "North Korea", "Palau", "Pakistan", "Palau", "Pakistan", "Papua New Guinea", "Philippines", "Pitcairn Islands", "Solomon Islands", "Singapore", "South Korea", "Sri Lanka", "Taiwan", "Thailand", "Tonga", "Tuvalu", "Vanuatu", "Vietnam", "Wallis and Futuna Islands"]
+
+  OECD_COUNTRIES = ["Australia", "Austria", "Belgium", "Canada", "Chile", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Iceland", "Ireland", "Israel", "Italy", "Japan", "Latvia", "Luxembourg", "Mexico", "Netherlands", "New Zealand", "Norway", "Poland", "Portugal", "Slovakia", "Slovenia", "South Korea", "Spain", "Sweden", "Switzerland", "Turkey", "United Kingdom"]
+
+  EU_COUNTRIES = ["Austria", "Belgium", "Bulgaria", "Croatia", "Republic of Cyprus", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Poland", "Portugal", "Romania", "Slovakia", "Slovenia", "Spain", "Sweden", "United Kingdom"] 
+
+  APEC_COUNTRIES = ["Australia", "Brunei", "Canada", "Chile", "China", "Hong Kong", "Indonesia", "Japan", "Malaysia", "Mexico", "New Zealand", "Papua New Guinea", "Peru", "Philippines", "Russia", "Singapore", "South Korea", "Taiwan", "Thailand", "Vietnam"] 
+end

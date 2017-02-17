@@ -1,7 +1,7 @@
 require 'roo' 
 require 'roo-xls'          
 require 'open-uri'
-require_relative'decapitalize'
+require_relative 'decapitalize'
 
 class VisaTypeParser
   extend Decapitalize

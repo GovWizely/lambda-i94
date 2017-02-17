@@ -4,9 +4,11 @@ require 'open-uri'
 require 'yaml'
 require_relative 'decapitalize'
 require_relative 'region_parser'
+require_relative 'constants'
 
 class ExcelParser
   extend Decapitalize
+  extend Constants
 
   REGIONS = ['Western Europe', 'Eastern Europe', 'Asia', 'Middle East', 'Africa',
     'Oceania', 'South America', 'Central America', 'Caribbean']
@@ -92,11 +94,11 @@ class ExcelParser
 
   def self.build_ntto_groups
     ntto_groups = {}
-    ntto_groups[:visa_waiver] = YAML.load_file('data/visa_waiver_countries.yaml')
-    ntto_groups[:apec] = YAML.load_file('data/apec_countries.yaml')
-    ntto_groups[:eu] = YAML.load_file('data/eu_countries.yaml')
-    ntto_groups[:oecd] = YAML.load_file('data/oecd_countries.yaml')
-    ntto_groups[:pata] = YAML.load_file('data/pata_countries.yaml')
+    ntto_groups[:visa_waiver] = Constants::VISA_WAIVER_COUNTRIES
+    ntto_groups[:apec] = Constants::APEC_COUNTRIES
+    ntto_groups[:eu] = Constants::EU_COUNTRIES
+    ntto_groups[:oecd] = Constants::OECD_COUNTRIES
+    ntto_groups[:pata] = Constants::PATA_COUNTRIES
     ntto_groups
   end
 end

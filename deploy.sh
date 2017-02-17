@@ -129,7 +129,7 @@ mkdir $lib_dir/vendor/.bundle
 cp packaging/bundler-config $lib_dir/vendor/.bundle/config
 cp packaging/wrapper.sh $package_dir/app
 curl -L --fail -o packaging/traveling-ruby-$TRAVELING_RUBY_VERSION-$target_os-nokogiri-1.6.6.2.tar.gz https://d6r77u77i8pq3.cloudfront.net/releases/traveling-ruby-gems-$TRAVELING_RUBY_VERSION-$target_os/nokogiri-1.6.6.2.tar.gz
-tar -xzf packaging/traveling-ruby-$TRAVELING_RUBY_VERSION-$target_os-nokogiri-1.6.6.2.tar.gz -C packaging/vendor/ruby
+tar -xzf packaging/traveling-ruby-$TRAVELING_RUBY_VERSION-$target_os-nokogiri-1.6.6.2.tar.gz -C $lib_dir/vendor/ruby
 
 banner "Zipping for Lambda"
 

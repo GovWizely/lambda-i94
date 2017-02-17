@@ -1,5 +1,4 @@
 var spawn = require('child_process').spawn;
-
 var invokeRubyApp = "./app";
 
 exports.handler = function(event, context) {
