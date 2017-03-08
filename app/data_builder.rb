@@ -19,10 +19,10 @@ class DataBuilder
     file_paths = @s3.list_objects(bucket: "#{@bucket_name}").contents.map{ |f| f.key }
 
     @s3.get_object(
-      response_target: '/tmp/regions.xlsx',
+      response_target: '/tmp/regions.xls',
       bucket: @bucket_name,
-      key: 'regions.xlsx')
-    region_dictionary = RegionParser.parse('/tmp/regions.xlsx')
+      key: 'regions.xls')
+    region_dictionary = RegionParser.parse('/tmp/regions.xls')
 
     build_additional_amounts(file_paths)
     root_data = build_root_data(file_paths, region_dictionary)
@@ -52,9 +52,9 @@ class DataBuilder
   def build_root_data(file_paths, region_dictionary)
     data = []
     file_paths.each do |path|
-      next if path == 'regions.xlsx' || path.include?('visa_types_ports')
+      next if path == 'regions.xls' || path.include?('visa_types_ports')
 
-      temp_path = "/tmp/#{path.gsub('/', '_')}"
+      temp_path = "/tmp/#{path}"
       @s3.get_object(
         response_target: temp_path,
         bucket: @bucket_name,
@@ -71,7 +71,7 @@ class DataBuilder
   def build_additional_amounts(paths)
     paths.each do |path|
       if path.include?('visa_types_ports')
-        temp_path = "/tmp/#{path.gsub('/', '_')}"
+        temp_path = "/tmp/#{path}"
         @s3.get_object(
           response_target: temp_path,
           bucket: @bucket_name,
