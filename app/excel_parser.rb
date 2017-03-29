@@ -90,6 +90,7 @@ class ExcelParser
     hash[:ntto_groups].push('OECD') if @ntto_groups[:oecd].include?(hash[:i94_country_or_region])
     hash[:ntto_groups].push('PATA') if @ntto_groups[:pata].include?(hash[:i94_country_or_region])
     hash[:ntto_groups].push 'Overseas'
+    hash[:ntto_groups].compact!                                                                 
   end
 
   def self.build_ntto_groups
