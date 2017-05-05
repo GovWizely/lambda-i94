@@ -6,7 +6,7 @@ set -e
 APP_NAME="lambda-i94"
 # Your app's version, increment before deploys!
 APP_VERSION="1.0.0"
-TRAVELING_RUBY_VERSION="20150210-2.1.5"
+TRAVELING_RUBY_VERSION="20150715-2.2.2"
 
 # Set this up in your ~/.aws/credentials
 # Use a profile that has the ability to put 

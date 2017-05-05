@@ -3,6 +3,7 @@ require_relative 'excel_parser'
 require_relative 'canada_mexico_parser'
 require_relative 'visa_type_parser'
 require_relative 'ports_parser'
+require_relative 'taxonomy_mapper'
 
 class DataBuilder
 
@@ -13,6 +14,7 @@ class DataBuilder
     @bucket_name = args[:bucket_name]
     @visa_type_dictionary = {}
     @ports_dictionary = {}
+    @taxonomy_mapper = TaxonomyMapper.new
   end
 
   def run
@@ -27,8 +29,15 @@ class DataBuilder
     build_additional_amounts(file_paths)
     root_data = build_root_data(file_paths, region_dictionary)
     data = add_additional_amounts(root_data)
+    add_taxonomy_fields(data)
 
     JSON.pretty_generate(data)
+  end
+
+  def add_taxonomy_fields(data)
+    data.map do |entry|
+      @taxonomy_mapper.add_taxonomy_fields(entry)
+    end
   end
 
   def add_additional_amounts(root_data)
